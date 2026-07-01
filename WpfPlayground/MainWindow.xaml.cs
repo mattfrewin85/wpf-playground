@@ -24,19 +24,16 @@ namespace WpfPlayground
         private void BrightnessSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UpdateSliderValueTextBlock(BrightnessValue, BrightnessSlider);
-            //BrightnessValue.Text = BrightnessSlider.Value.ToString();
         }
 
         private void ContrastSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UpdateSliderValueTextBlock(ContrastValue, ContrastSlider);
-            //ContrastValue.Text = ContrastSlider.Value.ToString();
         }
 
         private void SaturationSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             UpdateSliderValueTextBlock(SaturationValue, SaturationSlider);
-            //SaturationValue.Text = SaturationSlider.Value.ToString();
         }
 
         private void UpdateSliderValueTextBlock(TextBlock target, Slider source)
