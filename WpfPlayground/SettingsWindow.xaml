@@ -1,0 +1,91 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfPlayground.SettingsWindow"
+        Title="Camera Settings"
+        Width="800"
+        Height="600">
+
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <GroupBox Header="Image" Grid.Row="0" Grid.Column="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Label Content="Brightness" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Slider Name="BrightnessSlider" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="10" Value="0" Minimum="-10" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="BrightnessSlider_ValueChanged"/>
+                <TextBlock Text="0" Name="BrightnessValue" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+                <Label Content="Contrast" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Slider Name="ContrastSlider" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="10" Value="0" Minimum="-10" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="ContrastSlider_ValueChanged"/>
+                <TextBlock Text="0" Name="ContrastValue" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+                <Label Content="Saturation" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Slider Name="SaturationSlider" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="10" Value="0" Minimum="-10" Maximum="10" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="SaturationSlider_ValueChanged"/>
+                <TextBlock Text="0" Name="SaturationValue" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+                <CheckBox Content="HDR" Grid.Row="3" VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="True"/>
+                <CheckBox Content="Mirror" Grid.Row="4" VerticalAlignment="Center" Margin="10,0,0,0" IsChecked="True"/>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Output" Grid.Row="1" Grid.Column="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="7*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+
+                <Label Content="Resolution" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <ComboBox Grid.Row="0" Grid.Column="1"  HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" SelectedIndex="0">
+                    <ComboBoxItem Content="1920 x 1080"/>
+                    <ComboBoxItem Content="1760 x 990"/>
+                    <ComboBoxItem Content="1680 x 1050"/>
+                </ComboBox>
+
+                <Label Content="FPS" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <ComboBox Grid.Row="1" Grid.Column="1"  HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center" SelectedIndex="0">
+                    <ComboBoxItem Content="60"/>
+                    <ComboBoxItem Content="50"/>
+                    <ComboBoxItem Content="40"/>
+                    <ComboBoxItem Content="30"/>
+                    <ComboBoxItem Content="20"/>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+
+        <WrapPanel Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Right">
+            <Button Width="200" Height="32" Content="Reset" Margin="10"/>
+            <Button Width="200" Height="32" Content="Button" Margin="10"/>
+        </WrapPanel>
+
+        <GroupBox Grid.Column="1" Grid.RowSpan="2" Header="Preview">
+            <Image Source="/monkey.jpg" />
+        </GroupBox>
+    </Grid>
+</Window>
