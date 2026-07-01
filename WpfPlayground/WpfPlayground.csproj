@@ -8,4 +8,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Lenna.png" />
+    <None Remove="monkey.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Lenna.png" />
+    <Resource Include="monkey.jpg" />
+  </ItemGroup>
+
 </Project>
