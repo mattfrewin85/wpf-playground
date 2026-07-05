@@ -22,21 +22,5 @@ namespace WpfPlayground
         {
             InitializeComponent();
         }
-
-        private void InteractionPicture_MouseEnter(object sender, MouseEventArgs e)
-        {
-            Trace.WriteLine($"Mouse entered...");
-            //var st = (ScaleTransform)InteractionPicture.RenderTransform;
-            //st.ScaleX = 1.1;
-            //st.ScaleY = 1.1;
-        }
-
-        private void InteractionPicture_MouseLeave(object sender, MouseEventArgs e)
-        {
-            Trace.WriteLine($"Mouse left...");
-            //var st = (ScaleTransform)InteractionPicture.RenderTransform;
-            //st.ScaleX = 1;
-            //st.ScaleY = 1;
-        }
     }
 }

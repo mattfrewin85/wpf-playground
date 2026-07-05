@@ -11,9 +11,7 @@
             Name="InteractionPicture"  
             Source="/monkey.jpg" 
             Width="200"
-            RenderTransformOrigin="0.5,0.5" 
-            MouseEnter="InteractionPicture_MouseEnter"
-            MouseLeave="InteractionPicture_MouseLeave"
+            RenderTransformOrigin="0.5,0.5"
             >
             <Image.RenderTransform>
                 <ScaleTransform x:Name="AnimatedScaleTransform"/>
