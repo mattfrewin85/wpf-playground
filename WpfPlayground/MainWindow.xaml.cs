@@ -12,10 +12,16 @@ namespace WpfPlayground
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            SettingsWindow settingsWindow = new SettingsWindow();
-            settingsWindow.ShowDialog();
+            SettingsWindow newWindow = new SettingsWindow();
+            newWindow.ShowDialog();
+        }
+
+        private void HoverCardButton_Click(object sender, RoutedEventArgs e)
+        {
+            HoverCardWindow newWindow = new HoverCardWindow();
+            newWindow.ShowDialog();
         }
     }
 }

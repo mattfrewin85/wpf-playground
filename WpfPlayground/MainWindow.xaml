@@ -7,6 +7,7 @@
         Height="600">
 
     <StackPanel Margin="20">
-        <Button Content="Image Settings" Height="42" Click="Button_Click" />
+        <Button Name="SettingsButton" Content="Image Settings" Height="42" Click="SettingsButton_Click" />
+        <Button Name="HoverCardButton" Content="Hover Card" Height="42" Click="HoverCardButton_Click" />
     </StackPanel>
 </Window>
