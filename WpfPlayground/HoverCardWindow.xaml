@@ -10,7 +10,7 @@
         <Image 
             Name="InteractionPicture"  
             Source="/monkey.jpg" 
-            Margin="254,66,225,58" 
+            Width="200"
             RenderTransformOrigin="0.5,0.5" 
             MouseEnter="InteractionPicture_MouseEnter"
             MouseLeave="InteractionPicture_MouseLeave"
@@ -26,15 +26,25 @@
                                 Storyboard.TargetName="AnimatedScaleTransform"
                                 Storyboard.TargetProperty="ScaleX"
                                 To="1.03" Duration="0:0:0.21"
-                                />
+                                >
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
                             <DoubleAnimation 
                                 Storyboard.TargetName="AnimatedScaleTransform"
                                 Storyboard.TargetProperty="ScaleY"
                                 To="1.03" Duration="0:0:0.21"
-                                />
+                                >
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
+                
                 <EventTrigger RoutedEvent="Image.MouseLeave">
                     <BeginStoryboard>
                         <Storyboard>
@@ -42,12 +52,20 @@
                                 Storyboard.TargetName="AnimatedScaleTransform"
                                 Storyboard.TargetProperty="ScaleX"
                                 To="1" Duration="0:0:0.21"
-                                />
+                                >
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
                             <DoubleAnimation 
                                 Storyboard.TargetName="AnimatedScaleTransform"
                                 Storyboard.TargetProperty="ScaleY"
                                 To="1" Duration="0:0:0.21"
-                                />
+                                >
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
                         </Storyboard>
                     </BeginStoryboard>
                 </EventTrigger>
